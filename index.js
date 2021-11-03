@@ -55,6 +55,10 @@ app.get('/knockKnock', async (req, res, next)=>{
   res.status(200).send({message:"Who is it?"})
 })
 
-app.listen(1212, ()=>{
+app.get('/', (req, res) => {
+  res.status(200).json({routes:['/knockKnock','$chat bot route']})
+})
+
+app.listen(80, ()=>{
     console.log('started');
 })
