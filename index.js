@@ -51,6 +51,10 @@ app.post('/api/messages', async (req, res, next)=>{
       });
 })
 
+app.get('/knockKnock', async (req, res, next)=>{
+  res.status(200).send({message:"Who is it?"})
+})
+
 app.listen(1212, ()=>{
     console.log('started');
 })
